@@ -19,7 +19,7 @@ body {
 }
 
 #background {
-	background-image: url("../../sprites/beach.jpg");
+	background-image: url("../sprites/beach.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
