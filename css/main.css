@@ -19,7 +19,7 @@ body {
 }
 
 #background {
-	background-image: url("/sprites/beach.jpg");
+	background-image: url("./sprites/beach.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -29,7 +29,7 @@ body {
 }
 
 #book {
-	background-image: url("/sprites/book.png");
+	background-image: url("./sprites/book.png");
 	background-position: center center;
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -55,7 +55,7 @@ body {
 }
 
 .character {
-	background-image: url("/sprites/character-frame.png");
+	background-image: url("./sprites/character-frame.png");
 	background-position: center center;
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -82,7 +82,7 @@ body {
 }
 
 #logo {
-	background-image: url("/sprites/logo.png");
+	background-image: url("./sprites/logo.png");
 	background-size: contain;
 	background-clip: border-box;
 	background-repeat: no-repeat;
