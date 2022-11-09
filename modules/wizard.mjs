@@ -20,7 +20,7 @@ function loadModels() {
     model.position.copy(position);
     model.scale.copy(scale);
     const occluderMaterial = new THREE.MeshStandardMaterial({
-	    colorWrite: false,
+      colorWrite: false,
     });
     model.traverse((o) => {
       if (o.isMesh) o.material = occluderMaterial;
@@ -40,19 +40,6 @@ function loadModels() {
     model.rotation.z = rotation.z;
     parent.add(model);
   };
-
-  // OCCLUDER
-  const occluderPosition = new Vector3(0, -0.3, 0.15);
-  const occluderScale = new Vector3(0.065, 0.065, 0.065);
-
-  loader.load(
-    "./assets/headOccluder.glb",
-    function (gltf) {
-      onLoadOccluder(gltf, occluderPosition, occluderScale, noseBridge);
-    },
-    undefined,
-    undefined
-  );
 
   // HAT
   const hatPosition = new Vector3(0, -0.2, -0.5);
@@ -92,14 +79,27 @@ function loadModels() {
     undefined,
     undefined
   );
+
+  // OCCLUDER
+  const occluderPosition = new Vector3(0, -0.3, 0.15);
+  const occluderScale = new Vector3(0.065, 0.065, 0.065);
+
+  loader.load(
+    "./assets/headOccluder.glb",
+    function (gltf) {
+      onLoadOccluder(gltf, occluderPosition, occluderScale, noseBridge);
+    },
+    undefined,
+    undefined
+  );
 }
 loadModels();
 
 // LIGHTS
 const light = new THREE.HemisphereLight(0xffffff, 0xbbbbff, 1);
 scene.add(light);
-const directionalLight = new THREE.DirectionalLight( 0xffffff, 0.5 );
-scene.add( directionalLight );
+const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
+scene.add(directionalLight);
 
 // // FACE MESH
 // const faceMesh = mindarThree.addFaceMesh();
@@ -126,22 +126,22 @@ var bottomLip = new Object3D();
 var upperLip = new Object3D();
 var noseBridge = new Object3D();
 
+const anchorNoseBridge = mindarThree.addAnchor(168);
 const anchorForehead = mindarThree.addAnchor(10);
 const anchorUpperLip = mindarThree.addAnchor(0);
 const anchorBottomLip = mindarThree.addAnchor(17);
 const anchorNoseTip = mindarThree.addAnchor(1);
-const anchorNoseBridge = mindarThree.addAnchor(168);
 
+scene.add(noseBridge);
 scene.add(noseTip);
 scene.add(forehead);
 scene.add(bottomLip);
 scene.add(upperLip);
-scene.add(noseBridge);
+anchorNoseBridge.group.add(noseBridge);
 anchorNoseTip.group.add(noseTip);
 anchorForehead.group.add(forehead);
 anchorBottomLip.group.add(bottomLip);
 anchorUpperLip.group.add(upperLip);
-anchorNoseBridge.group.add(noseBridge);
 
 const start = async () => {
   await mindarThree.start();
