@@ -46,7 +46,7 @@ function loadModels() {
   const occluderScale = new Vector3(0.065, 0.065, 0.065);
 
   loader.load(
-    "../assets/headOccluder.glb",
+    "./assets/headOccluder.glb",
     function (gltf) {
       onLoadOccluder(gltf, occluderPosition, occluderScale, noseBridge);
     },
@@ -59,7 +59,7 @@ function loadModels() {
   const hatScale = new Vector3(0.04, 0.04, 0.04);
   const hatRotation = new Euler(Math.PI / 180 * -7, Math.PI / 180 * 45, 0);
   loader.load(
-    "../assets/wizard-hat/scene.gltf",
+    "./assets/wizard-hat/scene.gltf",
     function (gltf) {
       onLoad(gltf, hatPosition, hatScale, hatRotation, forehead);
     },
@@ -72,7 +72,7 @@ function loadModels() {
   const beardScale = new Vector3(0.65, 0.5, 0.5);
   const beardRot = new Vector3(0, 0, 0);
   loader.load(
-    "../assets/wizard-beard/wizard-beard.glb",
+    "./assets/wizard-beard/wizard-beard.glb",
     function (gltf) {
       onLoad(gltf, beardPosition, beardScale, beardRot, bottomLip);
     },
@@ -85,7 +85,7 @@ function loadModels() {
   const mustacheScale = new Vector3(0.5, 0.65, 0.5);
   const mustacheRot = new Vector3(0, 0, 0);
   loader.load(
-    "../assets/wizard-beard/wizard-mustache.glb",
+    "./assets/wizard-beard/wizard-mustache.glb",
     function (gltf) {
       onLoad(gltf, mustachePosition, mustacheScale, mustacheRot, upperLip);
     },

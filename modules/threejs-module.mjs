@@ -32,7 +32,7 @@ function loadModels() {
   // HAT
   const hatPosition = new Vector3(0, 0, 0);
   loader.load(
-    "../assets/wizard-hat/scene.gltf",
+    "./assets/wizard-hat/scene.gltf",
     function (gltf) {
       onLoad(gltf, hatPosition, "wizard-hat");
     },
@@ -45,7 +45,7 @@ function loadModels() {
   // BEARD
   const beardPosition = new Vector3(0, 0, 0);
   loader.load(
-    "../assets/wizard-beard-orig-mat/wizard-beard.gltf",
+    "./assets/wizard-beard-orig-mat/wizard-beard.gltf",
     function (gltf) {
       onLoad(gltf, beardPosition, "wizard-beard");
     },
