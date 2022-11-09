@@ -1,0 +1,63 @@
+* {
+	box-sizing: border-box;
+}
+
+button {
+	display: inline-block;
+	border: none;
+	margin: 0;
+	padding: 0;
+	font-size: 1rem;
+	line-height: 1;
+	background: transparent;
+	-webkit-appearance: none;
+}
+
+body {
+	margin: 0;
+}
+
+#background {
+	background-image: url("/sprites/beach.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+
+	width: 100vw;
+	height: 100vh;
+}
+
+#container-fullscreen {
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+	overflow: hidden;
+}
+
+
+#container {
+	border-radius: 25px;
+	display: block;
+	top: 50%;
+	left: 50%;
+	width: 50%;
+	height: 95%;
+	box-sizing: border-box;
+	border: 1cm;
+	background-color: #b9faac;
+	position: fixed;
+	overflow: hidden;
+	margin: 1rem;
+    transform: translate(-50%, -52%) scale(-1, 1);
+}
+
+#button-back {
+    background-image: url("/sprites/button_back.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    aspect-ratio: calc(383 / 125);
+    width: 15vh;
+    position: fixed;
+	top: 1rem;
+	right: 2rem;
+}

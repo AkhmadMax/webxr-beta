@@ -1,0 +1,8 @@
+Model Information:
+* title:	Wizard Hat
+* source:	https://sketchfab.com/3d-models/wizard-hat-df240b914a3c4f78b9d700b6b885a399
+* author:	bariacg (https://sketchfab.com/bariacg)
+
+Model License:
+* license type:	SKETCHFAB Editorial (https://sketchfab.com/licenses)
+* requirements:	Use only in connection with events that are newsworthy or of public interest

@@ -1,0 +1,94 @@
+* {
+	box-sizing: border-box;
+}
+
+button {
+	display: inline-block;
+	border: none;
+	margin: 0;
+	padding: 0;
+	font-size: 1rem;
+	line-height: 1;
+	background: transparent;
+	-webkit-appearance: none;
+	cursor: pointer;
+}
+
+body {
+	margin: 0;
+}
+
+#background {
+	background-image: url("/sprites/beach.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+
+	width: 100vw;
+	height: 100vh;
+}
+
+#book {
+	background-image: url("/sprites/book.png");
+	background-position: center center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	aspect-ratio: 2 / 1;
+	width: 80%;
+	display: block;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 0% 7%;
+	border: 5px tomato;
+}
+
+.book-page {
+	width: 50%;
+	height: 100%;
+	float: left;
+	padding: 8% 0%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.character {
+	background-image: url("/sprites/character-frame.png");
+	background-position: center center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	margin: 1vw;
+	padding: 2vw;
+	width: 12vw;
+	height: 12vw;
+	transition: transform .15s ease-in-out;
+	cursor: pointer;
+}
+
+.character:hover {
+	transform: rotate(5deg);
+}
+
+.character:active {
+	transform: scale(0.9);
+}
+
+.character-image {
+	max-width: 100%;
+	max-height: 100%;
+	border-radius: 5px;
+}
+
+#logo {
+	background-image: url("/sprites/logo.png");
+	background-size: contain;
+	background-clip: border-box;
+	background-repeat: no-repeat;
+	width: 20rem;
+	height: 5rem;
+	position: fixed;
+	top: 1rem;
+	left: 1rem;
+}
