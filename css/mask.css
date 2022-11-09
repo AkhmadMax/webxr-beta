@@ -18,7 +18,7 @@ body {
 }
 
 #background {
-	background-image: url("/sprites/beach.jpg");
+	background-image: url("../sprites/beach.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -52,7 +52,7 @@ body {
 }
 
 #button-back {
-    background-image: url("/sprites/button_back.png");
+    background-image: url("../sprites/button_back.png");
     background-repeat: no-repeat;
     background-size: contain;
     aspect-ratio: calc(383 / 125);
